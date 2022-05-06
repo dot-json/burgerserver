@@ -8,7 +8,11 @@ const __dirname = path.resolve(path.dirname(""));
 app.use(Express.static(__dirname + "/public"));
 app.use(favicon(path.join(__dirname, "public/media", "burger-solid.ico")));
 
-app.listen(3000);
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+});
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
