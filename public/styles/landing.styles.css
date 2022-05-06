@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #080a0e;
+}
+
+.pageWrapper {
+  height: 100vh;
+  background-color: #0c0f14;
+}
+.loadingPageWrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.heroContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  max-width: 80vw;
+  overflow: hidden;
+}
+.heroTitle {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  color: whitesmoke;
+  user-select: none;
+}
+.heroText {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+  user-select: none;
+}
+.heroText2 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: whitesmoke;
+  user-select: none;
+}
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+.landingButton {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 2rem;
+  color: whitesmoke;
+  width: 12rem;
+  height: 5rem;
+  margin-top: 5rem;
+  background-color: transparent;
+  border: 4px solid rgb(228, 13, 84);
+  border-radius: 5rem;
+}
+.landingButton::before {
+  content: "";
+  background: rgb(228, 13, 84);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: height 500ms ease;
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.landingButton:hover::before {
+  height: 380%;
+}
+.landingButton:focus {
+  outline: none;
+}
+.descButton {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.descButton:hover {
+  background-color: whitesmoke;
+  color: #080a0e;
+}
+
+@media screen and (max-width: 1544px) {
+  .heroContainer {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 760px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroText {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .heroText2 {
+    font-size: 1rem;
+  }
+}

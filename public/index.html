@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="media/burger-solid.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@500&family=Roboto+Mono:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b276cc7700.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/landing.styles.css" />
+    <title>BurgerHut</title>
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <section class="hero">
+        <video class="heroVideo" autoplay muted poster="media/heroframe.png">
+          <source src="media/hero.mp4" />
+        </video>
+        <div class="heroContainer">
+          <h1 class="heroTitle">Welcome to BurgerHut</h1>
+          <h2 class="heroText">Let's explore the best burgers in your area!</h2>
+          <h2 class="heroText2">Hit the button to begin the journey!</h2>
+          <button
+            type="button"
+            class="landingButton"
+            onclick="document.location.href='shop';"
+          >
+            Begin
+          </button>
+        </div>
+        <button
+          type="button"
+          class="descButton"
+          onclick="document.location.href='video-description';"
+        >
+          Description
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

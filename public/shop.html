@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="media/burger-solid.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b276cc7700.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/shop.styles.css" />
+    <title>BurgerHut | Shop</title>
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <div class="pageLoaderWrapper" id="revealWrapper">
+        <span class="revealIconWrapper" id="revealIconWrapper"
+          ><i class="fa-solid fa-burger fa-bounce"></i
+        ></span>
+      </div>
+      <header>
+        <nav class="navbar">
+          <div class="titleWrapper" onclick="document.location.href='shop';">
+            <span class="logoWrapper"><i class="fa-solid fa-burger"></i></span>
+            <h1 class="titleText">BURGERHUT</h1>
+          </div>
+          <div class="buttonsWrapper">
+            <button
+              type="button"
+              class="navButton"
+              onclick="document.location.href='members';"
+            >
+              Members
+            </button>
+            <span class="cartWrapper" style="cursor: pointer">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <article class="banner">
+          <span class="bannerText">ORDER 2 GET 1 FREE!</span>
+        </article>
+        <section class="itemSection">
+          <h2 class="productsTitle">Products</h2>
+          <div class="cardContainer">
+            <div class="card">
+              <div class="imgCont">
+                <figure style="width: 100%; height: 100%">
+                  <a href="../media/cheese.jpg" target="_blank">
+                    <img
+                      src="../media/cheese.jpg"
+                      alt="cheeseburger"
+                      style="height: 100%; object-fit: cover"
+                    />
+                  </a>
+                  <figcaption>Illustration of our cheeseburger.</figcaption>
+                </figure>
+              </div>
+              <span class="cardTitle">Cheeseburger</span>
+              <div class="cardButtonsWrapper">
+                <a
+                  class="infoButton"
+                  href="https://www.calorieking.com/us/en/foods/f/calories-in-sandwiches-burgers-cheeseburger-with-onion-spread/INhWhSiDRlWoJRv7zN2bTg"
+                  target="_blank"
+                  >Info</a
+                >
+                <button class="orderButton">Order</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgCont">
+                <figure style="width: 100%; height: 100%">
+                  <a href="../media/dcheese.jpg" target="_blank">
+                    <img
+                      src="../media/dcheese.jpg"
+                      alt="double cheeseburger"
+                      style="height: 100%; object-fit: cover"
+                    />
+                  </a>
+                  <figcaption>
+                    Illustration of our double cheeseburger.
+                  </figcaption>
+                </figure>
+              </div>
+              <span class="cardTitle" style="margin: 0.8rem 0rem">
+                Double Cheeseburger
+              </span>
+              <div class="cardButtonsWrapper">
+                <a
+                  class="infoButton"
+                  href="https://www.calorieking.com/us/en/foods/f/calories-in-sandwiches-burgers-double-cheeseburger/PCHfLb_nS7eOGd6h9U97mg"
+                  target="_blank"
+                  >Info</a
+                >
+                <button class="orderButton">Order</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgCont">
+                <figure style="width: 100%; height: 100%">
+                  <a href="../media/fish.jpg" target="_blank">
+                    <img
+                      src="../media/fish.jpg"
+                      alt="fishburger"
+                      style="height: 100%; object-fit: cover"
+                    />
+                  </a>
+                  <figcaption>Illustration of our fish burger.</figcaption>
+                </figure>
+              </div>
+              <span class="cardTitle">Fishburger</span>
+              <div class="cardButtonsWrapper">
+                <a
+                  class="infoButton"
+                  href="https://www.calorieking.com/us/en/foods/f/calories-in-sandwiches-burgers-filet-o-fish-sandwich/BR4uuMcSRZeCBaR8dVPg5A"
+                  target="_blank"
+                  >Info</a
+                >
+                <button class="orderButton">Order</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgCont">
+                <figure style="width: 100%; height: 100%">
+                  <a href="../media/chicken.jpg" target="_blank">
+                    <img
+                      src="../media/chicken.jpg"
+                      alt="chickenburger"
+                      style="height: 100%; object-fit: cover"
+                    />
+                  </a>
+                  <figcaption>Illustration of our chicken burger.</figcaption>
+                </figure>
+              </div>
+              <span class="cardTitle">Chickenburger</span>
+              <div class="cardButtonsWrapper">
+                <a
+                  class="infoButton"
+                  href="https://www.calorieking.com/us/en/foods/f/calories-in-sandwiches-burgers-chicken-sandwich/SoLOhDm7RfaaVTAe7MrGBA"
+                  target="_blank"
+                  >Info</a
+                >
+                <button class="orderButton">Order</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footerWrapper">
+        <div class="footerContent">
+          <span class="footerTitle">Best restaurant so far...</span>
+        </div>
+        <h2 class="CPNotice">© 2022 // Gazdag Zsombor</h2>
+      </footer>
+    </div>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

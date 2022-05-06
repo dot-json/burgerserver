@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #080a0e;
+}
+
+::selection {
+  background-color: #ca0b4b;
+}
+
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #0c0f14;
+}
+.pageLoaderWrapper {
+  z-index: 771;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #0e1118;
+  background-image: url("../media/waves.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+}
+.animPageLoaderWrapper {
+  animation: reveal 300ms 1.7s forwards;
+}
+.revealIconWrapper {
+  font-size: 8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.animRevealIconWrapper {
+  animation: reveal 200ms 1400ms forwards;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 3rem;
+  background-color: #131920;
+  border-bottom: 5px solid rgb(228, 13, 84);
+  box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+}
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+.titleWrapper:hover > .logoWrapper {
+  color: transparent;
+  background-position: center;
+  background-clip: text;
+  background-image: url("https://media4.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif");
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.titleWrapper:hover > .titleText {
+  color: transparent;
+  background-position: center;
+  background-clip: text;
+  background-image: url("https://media4.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif");
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.logoWrapper {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.cartWrapper {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 200ms ease;
+}
+.cartWrapper:hover {
+  color: rgb(228, 13, 84);
+  transition: color 200ms ease;
+}
+.titleText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1em;
+  color: whitesmoke;
+  margin: 0;
+  margin-left: 0.6rem;
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+}
+.navButton {
+  margin-right: 1.5rem;
+  padding: 0.15rem 0.5rem;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  border: 2px solid rgb(228, 13, 84);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.navButton:hover {
+  background-color: rgb(228, 13, 84);
+  transition: background-color 200ms ease-in-out;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  background-color: rgb(47, 19, 124);
+  box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  overflow-x: hidden;
+}
+.bannerText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 0.7rem;
+  margin: 0;
+  color: transparent;
+  background-image: url("https://media4.giphy.com/media/3og0IGjLXRttYbbtcc/giphy.gif");
+  background-position: center center;
+  background-clip: text;
+  background-size: 70rem;
+  user-select: none;
+}
+.itemSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  overflow-x: hidden;
+}
+.productsTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(224, 224, 224);
+  margin: 4rem 0 2rem 0;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 26rem;
+  min-width: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  margin: 1.5rem 1.5rem;
+  border-radius: 1rem;
+  background: rgb(26, 34, 43);
+  background: linear-gradient(130deg, rgb(17, 22, 29) 0%, rgb(17, 21, 27) 100%);
+  box-shadow: 0px 2px 29px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 29px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 29px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(30, 34, 39);
+}
+.imgCont {
+  width: 100%;
+  height: 12rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgb(30, 34, 39);
+}
+.cardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1em;
+  color: rgb(224, 224, 224);
+  margin: 1rem 0;
+  text-align: center;
+}
+.cardButtonsWrapper {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 85%;
+  justify-content: space-between;
+}
+.orderButton {
+  padding: 0.6rem 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgb(224, 224, 224);
+  background-color: transparent;
+  border: 2px solid #e40d54;
+  border-radius: 1rem;
+  transition: background-color 200ms ease;
+}
+.orderButton:hover {
+  transition: background-color 200ms ease;
+  background-color: rgb(228, 13, 84);
+}
+.orderButton:focus {
+  outline: none;
+}
+.infoButton {
+  padding: 0.6rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgb(224, 224, 224);
+  background-color: transparent;
+  border-radius: 1rem;
+  transition: color 200ms ease;
+}
+.infoButton:hover {
+  cursor: pointer;
+  color: rgb(0, 102, 255);
+}
+a:visited {
+  color: purple;
+}
+a:active {
+  color: purple;
+}
+.footerWrapper {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #131920;
+  border-top: 5px solid rgb(228, 13, 84);
+  overflow-x: hidden;
+}
+.footerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(1rem, 70vw, 40rem);
+  border-bottom: 1px solid gray;
+}
+.footerTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: rgb(224, 224, 224);
+}
+.CPNotice {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgb(146, 146, 146);
+  margin-top: 0.5rem;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .titleText {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .bannerText {
+    font-size: clamp(1rem, 8vw, 2.8rem);
+    letter-spacing: initial;
+  }
+  .banner {
+    height: 6rem;
+  }
+  .productsTitle {
+    text-align: center;
+  }
+  .cardContainer {
+    padding: 0;
+  }
+}

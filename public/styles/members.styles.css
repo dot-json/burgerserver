@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #080a0e;
+}
+::selection {
+  background-color: #ca0b4b;
+}
+::placeholder {
+  color: rgba(245, 245, 245, 0.71);
+}
+table,
+th,
+td {
+  border: 1px solid rgb(175, 175, 175);
+  border-collapse: collapse;
+}
+.pageWrapper {
+  height: 100vh;
+  background-color: #0c0f14;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 3rem;
+  background-color: #131920;
+  border-bottom: 5px solid rgb(228, 13, 84);
+  box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.24);
+}
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+.titleWrapper:hover > .logoWrapper {
+  color: transparent;
+  background-position: center;
+  background-clip: text;
+  background-image: url("https://media4.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif");
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.titleWrapper:hover > .titleText {
+  color: transparent;
+  background-position: center;
+  background-clip: text;
+  background-image: url("https://media4.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif");
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.logoWrapper {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.cartWrapper {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 200ms ease;
+}
+.cartWrapper:hover {
+  color: rgb(228, 13, 84);
+  transition: color 200ms ease;
+}
+.titleText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1em;
+  color: whitesmoke;
+  margin: 0;
+  margin-left: 0.6rem;
+  transition: background-image 400ms ease, color 400ms ease;
+}
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+}
+.navButton {
+  margin-right: 1.5rem;
+  padding: 0.15rem 0.5rem;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  border: 2px solid rgb(228, 13, 84);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.navButton:hover {
+  background-color: rgb(228, 13, 84);
+  transition: background-color 200ms ease-in-out;
+}
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 4rem);
+  padding: 3rem 2rem;
+  flex-direction: row;
+  background-color: #0c0f14;
+}
+.dividedContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 0 2rem;
+}
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.5rem, 3.7vw, 4.2rem);
+  font-weight: 600;
+  color: whitesmoke;
+  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+  line-height: 1em;
+}
+.titlePhrase {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+.infoBurgers {
+  width: 60%;
+  margin: 0 auto;
+  filter: brightness(90%);
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem 4rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: rgb(17, 22, 29);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 22, 29, 1) 0%,
+    rgba(17, 22, 29, 0.9471989479385504) 25%,
+    rgba(17, 22, 29, 0.8995799003195029) 50%,
+    rgba(17, 22, 29, 0.7007003484987745) 75%,
+    rgba(32, 42, 56, 0) 100%
+  );
+  /* box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.21); */
+}
+.formItemWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  max-width: 30rem;
+  width: 90%;
+  height: fit-content;
+}
+.formLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.formInput {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem;
+  height: 2.8rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.71);
+  color: whitesmoke;
+  font-size: 1rem;
+  transition: border 300ms ease;
+}
+.formInput:focus {
+  border: 1px solid rgb(228, 13, 84);
+  outline: none;
+}
+.formTextArea {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5rem;
+  height: 7rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.71);
+  color: whitesmoke;
+  font-size: 1rem;
+  transition: border 300ms ease;
+}
+.formTextArea:focus {
+  border: 1px solid rgb(228, 13, 84);
+  outline: none;
+}
+.radioWrapper {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: fit-content;
+  margin: 0.2rem 0;
+}
+.radioButton {
+  background-color: #eee;
+  border-radius: 15%;
+}
+.radioLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: whitesmoke;
+  margin-left: 0.35rem;
+}
+.formButtonsWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.submitButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 6rem;
+  height: 2.6rem;
+  color: whitesmoke;
+  background-color: #ca0b4b;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 200ms ease;
+}
+.submitButton:hover {
+  box-shadow: 0px 0px 26px 4px rgba(202, 11, 75, 0.65);
+  -webkit-box-shadow: 0px 0px 26px 4px rgba(202, 11, 75, 0.65);
+  -moz-box-shadow: 0px 0px 26px 4px rgba(202, 11, 75, 0.65);
+}
+.resetButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 6rem;
+  height: 2.6rem;
+  margin-left: 1rem;
+  background-color: transparent;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.resetButton:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+.table {
+  width: 60%;
+  height: 22rem;
+  border: 1px solid rgba(245, 245, 245, 0.76);
+  margin-bottom: 2rem;
+}
+.tableCaption {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+}
+.tableHeader {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: whitesmoke;
+  height: 25%;
+  width: 33%;
+}
+.tableRow {
+  height: 25%;
+  border: 1px solid whitesmoke;
+}
+.tableLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: whitesmoke;
+  text-align: center;
+}
+.tableTick {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: whitesmoke;
+  text-align: center;
+}
+
+@media screen and (max-width: 1036px) {
+  .pageWrapper {
+    height: fit-content;
+  }
+  .mainContainer {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    height: fit-content;
+  }
+  .dividedContainer {
+    width: 100%;
+    height: fit-content;
+    padding: 1.4rem 0;
+  }
+  .title {
+    font-size: clamp(3.5rem, 8.5vw, 4rem);
+  }
+  .titlePhrase {
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+  }
+  .formContainer {
+    width: 100%;
+    background: transparent;
+    align-items: center;
+    padding: 2rem 0rem;
+  }
+  .formButtonsWrapper {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .titleText {
+    font-size: 1.5rem;
+  }
+  .dividedContainer {
+    padding: 1.4rem 0;
+  }
+  .formContainer {
+    padding: 0;
+    box-shadow: none;
+  }
+  .formItemWrapper {
+    margin: 0.7rem 0;
+  }
+  .title {
+    font-size: clamp(2.42em, 8vw, 4rem);
+  }
+  .titlePhrase {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+  }
+}

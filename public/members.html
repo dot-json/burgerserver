@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BurgerHut | Members</title>
+    <link rel="icon" href="media/burger-solid.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/members.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b276cc7700.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <header>
+        <nav class="navbar">
+          <div class="titleWrapper" onclick="document.location.href='shop';">
+            <span class="logoWrapper"><i class="fa-solid fa-burger"></i></span>
+            <h1 class="titleText">BURGERHUT</h1>
+          </div>
+          <div class="buttonsWrapper">
+            <button
+              type="button"
+              class="navButton"
+              onclick="document.location.href='members';"
+            >
+              Members
+            </button>
+            <span class="cartWrapper" style="cursor: pointer">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <main class="mainContainer">
+        <div class="dividedContainer">
+          <h1 class="title">Become a Member!</h1>
+          <h2 class="titlePhrase">
+            Sign up and enjoy the benefits of the inner circle!
+          </h2>
+          <table class="table">
+            <caption class="tableCaption">
+              Subscriber Bonuses
+            </caption>
+
+            <tr class="tableRow">
+              <th class="tableHeader tableTick">
+                <i class="fa-solid fa-utensils"></i>
+              </th>
+              <th class="tableHeader">Standard</th>
+              <th class="tableHeader">Member</th>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableLabel">Delivery<br />Priority</td>
+              <td class="tableTick"><i class="fa-solid fa-square"></i></td>
+              <td class="tableTick">
+                <i class="fa-solid fa-square-check"></i>
+              </td>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableLabel">Exclusive Coupons</td>
+              <td class="tableTick"><i class="fa-solid fa-square"></i></td>
+              <td class="tableTick">
+                <i class="fa-solid fa-square-check"></i>
+              </td>
+            </tr>
+            <tr class="tableRow">
+              <td class="tableLabel">Custom Meal Plan</td>
+              <td class="tableTick"><i class="fa-solid fa-square"></i></td>
+              <td class="tableTick">
+                <i class="fa-solid fa-square-check"></i>
+              </td>
+            </tr>
+          </table>
+          <img
+            src="media/delivery.png"
+            alt="moving burgers"
+            class="infoBurgers"
+          />
+        </div>
+        <aside
+          class="dividedContainer"
+          style="justify-content: center; align-items: center"
+        >
+          <form
+            class="formContainer"
+            action="mailto:orders@burgerhut.com"
+            method="get"
+            enctype="text/plain"
+          >
+            <div class="formItemWrapper">
+              <label for="name" class="formLabel" style="margin-bottom: 0.2rem"
+                >Name</label
+              >
+              <input
+                id="name"
+                title="name"
+                placeholder="Nickname"
+                class="formInput"
+                maxlength="24"
+                required
+              />
+            </div>
+            <div class="formItemWrapper">
+              <label for="email" class="formLabel" style="margin-bottom: 0.2rem"
+                >E-Mail</label
+              >
+              <input
+                id="email"
+                title="email"
+                placeholder="example@domain.com"
+                type="email"
+                class="formInput"
+                maxlength="34"
+                required
+              />
+            </div>
+            <div class="formItemWrapper">
+              <label
+                for="question"
+                class="formLabel"
+                style="margin-bottom: 0.2rem"
+                >Where Did You Hear About Us?</label
+              >
+              <textarea
+                id="question"
+                title="question"
+                placeholder="Billboard, TV..."
+                class="formTextArea"
+                maxlength="48"
+              ></textarea>
+            </div>
+            <fieldset class="formItemWrapper" style="border: none">
+              <legend class="formLabel" style="margin-bottom: 0.2rem">
+                Billing Plan
+              </legend>
+              <div class="innerWrapper" style="margin-bottom: 0.2rem">
+                <input
+                  itemid="radio"
+                  type="radio"
+                  id="monthly"
+                  name="billing plan"
+                  value="MONTHLY"
+                  class="radioButton"
+                />
+                <label for="monthly" class="radioLabel">Monthly</label>
+              </div>
+              <div class="innerWrapper">
+                <input
+                  itemid="radio"
+                  type="radio"
+                  id="yearly"
+                  name="billing plan"
+                  value="MONTHLY"
+                  class="radioButton"
+                />
+                <label for="yearly" class="radioLabel">Yearly</label>
+              </div>
+            </fieldset>
+            <div class="formItemWrapper" style="margin: 0rem 0">
+              <div class="innerWrapper">
+                <input type="checkbox" id="tos" name="tos" />
+                <label for="tos" class="radioLabel">I accept the TOS</label>
+              </div>
+            </div>
+            <div class="formButtonsWrapper">
+              <button type="submit" class="submitButton">Submit</button>
+              <button type="reset" class="resetButton">Reset</button>
+            </div>
+          </form>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
