@@ -1,12 +1,6 @@
 const revealCont = document.getElementById("revealWrapper");
 const revealIcon = document.getElementById("revealIconWrapper");
 
-// setInterval(() => {
-//   revealCont.parentElement.removeChild(revealCont);
-// }, 3000);
-
-//while (revealCont.offsetHeight != 0) {}
-
 function removeReveal() {
   document.body.style.overflow = "hidden";
   setInterval(() => {
@@ -15,7 +9,9 @@ function removeReveal() {
   }, 500);
   setInterval(() => {
     document.body.style.overflow = "scroll";
-    revealCont.parentElement.removeChild(revealCont);
+    if (revealCont.parentElement != null) {
+      revealCont.parentElement.removeChild(revealCont);
+    }
     window.removeEventListener("load", removeReveal);
   }, 2400);
 }
