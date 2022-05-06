@@ -369,4 +369,7 @@ td {
   .titlePhrase {
     font-size: clamp(1.1rem, 3vw, 1.6rem);
   }
+  .table {
+    width: 24rem;
+  }
 }
