@@ -1,0 +1,19 @@
+@media print {
+  .heroVideo {
+    display: none;
+  }
+  .pageWrapper {
+    background-color: white;
+  }
+  .heroTitle,
+  .heroText,
+  .heroText2,
+  .landingButton,
+  .descButton {
+    color: black;
+  }
+  .descButton,
+  .landingButton {
+    border-color: black;
+  }
+}

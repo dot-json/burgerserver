@@ -44,6 +44,15 @@ html {
 .animRevealIconWrapper {
   animation: reveal 200ms 1400ms forwards;
 }
+.skipper {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  color: white;
+}
+.skipper:focus {
+  transform: translateY(0);
+}
 .navbar {
   display: flex;
   align-items: center;

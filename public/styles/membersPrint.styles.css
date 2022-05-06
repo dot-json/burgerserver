@@ -1,0 +1,37 @@
+@media print {
+  .navbar {
+    display: none;
+  }
+  .bannerText {
+    background-image: none;
+    background-clip: initial;
+    color: white;
+  }
+  .productsTitle {
+    color: black;
+  }
+  .mainContainer,
+  .pageWrapper,
+  .formContainer {
+    background-color: white;
+    background: white;
+  }
+  ::placeholder,
+  .title,
+  .titlePhrase,
+  .tableHeader,
+  .tableRow,
+  .tableTick,
+  .tableLabel,
+  .tableCaption,
+  .formLabel,
+  .radioLabel,
+  .resetButton {
+    color: black;
+  }
+  .formTextArea,
+  .formInput,
+  .resetButton {
+    border-color: black;
+  }
+}

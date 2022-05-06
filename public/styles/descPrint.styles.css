@@ -1,0 +1,12 @@
+@media print {
+  .pageWrapper {
+    background-color: white;
+  }
+  .desc {
+    color: black;
+  }
+  .backButton {
+    background-color: black;
+    border: none;
+  }
+}

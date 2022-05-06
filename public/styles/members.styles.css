@@ -23,6 +23,15 @@ td {
   height: 100vh;
   background-color: #0c0f14;
 }
+.skipper {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  color: white;
+}
+.skipper:focus {
+  transform: translateY(0);
+}
 .navbar {
   display: flex;
   justify-content: space-between;

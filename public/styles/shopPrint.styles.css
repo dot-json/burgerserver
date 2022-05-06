@@ -1,0 +1,17 @@
+@media print {
+  .navbar,
+  .footerWrapper {
+    display: none;
+  }
+  .bannerText {
+    background-image: none;
+    background-clip: initial;
+    color: white;
+  }
+  .productsTitle {
+    color: black;
+  }
+  .pageWrapper {
+    background-color: white;
+  }
+}
